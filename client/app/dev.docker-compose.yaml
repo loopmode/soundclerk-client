@@ -4,7 +4,7 @@ version: '2.1'
 # mounts sources as volumes so we can have file watching and hot reloading
 
 services:
-    client_dev:
+    client:
         image: soundclerk/client-dev
         build:
             context: ${DOCKER_ROOT_PATH}

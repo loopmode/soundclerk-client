@@ -41,8 +41,13 @@ When using VS Code as editor, this is recommended as it has integrated auto-form
 
 **scripts/docker-develop.sh**
 
-This starts the development environment inside a Docker container.
+This starts the development environment inside a Docker container. _Note: `yarn docker` is an alias for this script!_
 
 **scripts/docker-start.sh**
 
 This starts the production client using nginx inside a Docker container.
+
+**docker-compose up**
+
+Note that in order for `docker-compose up` to work, you must have used `scripts/docker-prepare.sh` to create the `.docker-packages` folder.
+That's why it is recommended to use `scripts/docker-develop.sh` or `yarn docker` instead.
