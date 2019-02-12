@@ -1,0 +1,24 @@
+version: '2.1'
+
+# development environment for client and server in parallel
+# mounts sources as volumes so we can have file watching and hot reloading
+
+services:
+    client_dev:
+        image: soundclerk/client-dev
+        build:
+            context: ${DOCKER_ROOT_PATH}
+            dockerfile: client/app/dev.Dockerfile
+        volumes:
+            - ${DOCKER_ROOT_PATH}/client:/opt/soundclerk/client
+        environment:
+            - CHOKIDAR_USEPOLLING=true
+        ports:
+            - '3000:3000'
+            # file watcher
+            # - '35729:35729'
+            # debugger
+            # - '9229:9229'
+        restart: 'no'
+        command: scripts/develop.sh client --watch 1
+

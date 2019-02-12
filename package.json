@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "@lviz/workspace",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jovica Aleksic <jovica.aleksic@loopmode.de>",
+  "license": "MIT",
+  "workspaces": [
+    "__dev__/*",
+    "client/*"
+  ],
+  "scripts": {
+    "watch": "lerna run watch --parallel --stream",
+    "app": "cd client/app && yarn start",
+    "start": "npm-run-all --parallel app watch"
+  }
+}

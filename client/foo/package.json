@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "@soundclerk/foo",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "babel": {
+    "extends": "@soundclerk/babel"
+  },
+  "eslintConfig": {
+    "extends": "@soundclerk/eslint"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production babel src --out-dir lib --copy-files",
+    "watch": "yarn build --watch",
+    "lint": "eslint src"
+  }
+}

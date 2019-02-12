@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "__PACKAGE_NAMESPACE__/__PACKAGE_NAME__",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "babel": {
+    "extends": "__PACKAGE_NAMESPACE__/babel"
+  },
+  "eslintConfig": {
+    "extends": "__PACKAGE_NAMESPACE__/eslint"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production babel src --out-dir lib --copy-files",
+    "watch": "yarn build --watch",
+    "lint": "eslint src"
+  }
+}

@@ -1,0 +1,13 @@
+version: '2.1'
+
+# compiles the client and serves it via nginx
+
+services:
+    client:
+        image: soundclerk/client
+        build:
+            context: ${DOCKER_ROOT_PATH}
+            dockerfile: client/app/Dockerfile
+        ports:
+            - '80:80'
+            - '443:443'

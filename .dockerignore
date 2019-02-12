@@ -1,0 +1,9 @@
+.git
+.docker-storage
+*Dockerfile*
+*docker-compose*
+*node_modules*
+*lib/*
+*.log
+desktop.ini
+packages/app/build/*
